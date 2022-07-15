@@ -22,15 +22,16 @@ function createButtons(states) {
             var updateStates = JSON.parse(localStorage.getItem("states"));
             if (!updateStates[state]) {
                 statesDic[state] = true;
-                document.getElementById(state).style.backgroundColor = '#a3b18a';
-                //document.getElementById(state).style.backgroundImage = "linear-gradient(rgba(226, 228, 230, .8), rgba(226, 228, 230, .8)), url('{ny.jpg'})";
-                //document.getElementById(state).style.backgroundSize = "auto";
+                //document.getElementById(state).style.backgroundColor = '#a3b18a';
+                document.getElementById(state).style.backgroundImage = "linear-gradient(rgba(226, 228, 230, 0.7), rgba(226, 228, 230, .7)), url('States/" + state + ".jpg')";
+                document.getElementById(state).style.backgroundSize = "100% 100%";
                 localStorage.setItem("states", JSON.stringify(statesDic));
                 updateScore(true);
             }
             else {
                 statesDic[state] = false;
                 document.getElementById(state).style.backgroundColor = '#f1f3f5';
+                document.getElementById(state).style.backgroundImage = "none";
                 localStorage.setItem("states", JSON.stringify(statesDic));
                 updateScore(false);
             }
@@ -43,7 +44,9 @@ function createButtons(states) {
         container.appendChild(br);
 
         if (states[state]) {
-            document.getElementById(state).style.backgroundColor = '#a3b18a';
+            document.getElementById(state).style.backgroundImage = "linear-gradient(rgba(226, 228, 230, 0.7), rgba(226, 228, 230, .7)), url('States/" + state + ".jpg')";
+            document.getElementById(state).style.backgroundSize = "100% 100%";
+            //document.getElementById(state).style.backgroundColor = '#a3b18a';
         }
     }
 }
