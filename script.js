@@ -23,6 +23,8 @@ function createButtons(states) {
             if (!updateStates[state]) {
                 statesDic[state] = true;
                 document.getElementById(state).style.backgroundColor = '#a3b18a';
+                //document.getElementById(state).style.backgroundImage = "linear-gradient(rgba(226, 228, 230, .8), rgba(226, 228, 230, .8)), url('{ny.jpg'})";
+                //document.getElementById(state).style.backgroundSize = "auto";
                 localStorage.setItem("states", JSON.stringify(statesDic));
                 updateScore(true);
             }
@@ -47,9 +49,15 @@ function createButtons(states) {
 }
 
 function clearStorage() {
-    localStorage.clear();
-    console.log(localStorage.getItem("states"))
-    console.log(localStorage.getItem("score"))
+    if (confirm('Are you sure you want to start a new trip? All state data will be cleared.')) {
+        localStorage.clear();
+        console.log(localStorage.getItem("states"))
+        console.log(localStorage.getItem("score"))
+        location.reload();
+    } 
+    else {
+        console.log('Clear canceled.');
+    }
 }
 
 function updateScore(direction) {
