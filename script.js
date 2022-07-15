@@ -23,7 +23,7 @@ function createButtons(states) {
             if (!updateStates[state]) {
                 statesDic[state] = true;
                 //document.getElementById(state).style.backgroundColor = '#a3b18a';
-                document.getElementById(state).style.backgroundImage = "linear-gradient(rgba(226, 228, 230, 0.7), rgba(226, 228, 230, .7)), url('license-plate-game/States/" + state + ".jpg')";
+                document.getElementById(state).style.backgroundImage = "linear-gradient(rgba(226, 228, 230, 0.7), rgba(226, 228, 230, .7)), url('States/" + state + ".jpg')";
                 document.getElementById(state).style.backgroundSize = "100% 100%";
                 localStorage.setItem("states", JSON.stringify(statesDic));
                 updateScore(true);
@@ -44,7 +44,7 @@ function createButtons(states) {
         container.appendChild(br);
 
         if (states[state]) {
-            document.getElementById(state).style.backgroundImage = "linear-gradient(rgba(226, 228, 230, 0.7), rgba(226, 228, 230, .7)), url('license-plate-game/States/" + state + ".jpg')";
+            document.getElementById(state).style.backgroundImage = "linear-gradient(rgba(226, 228, 230, 0.7), rgba(226, 228, 230, .7)), url('States/" + state + ".jpg')";
             document.getElementById(state).style.backgroundSize = "100% 100%";
             //document.getElementById(state).style.backgroundColor = '#a3b18a';
         }
