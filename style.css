@@ -1,0 +1,53 @@
+html,
+body {
+    scroll-behavior: smooth;
+    background: #f1f3f5;
+    color: #000000;
+    font-family: 'Lato', 'Arial', sans-serif;
+    font-weight: 200;
+    font-size: 20px;
+}
+
+button {
+    font-family: 'Lato', 'Arial', sans-serif;
+    background-color: #f1f3f5;
+    border: 2px solid black;
+    color: black;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+    width: 100%;
+    margin: 10px;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #dad7cd;
+}
+
+h1 {
+    font-size: 20px;
+}
+
+input {
+    font-family: 'Lato', 'Arial', sans-serif;
+    border: 2px solid black;
+    color: black;
+    padding: 5px;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+    width: 100%;
+    margin: 10px;
+    border-radius: 5px;
+}
+
+#plate-btn {
+    background-color: #588157;
+}
+
+#plate-btn:hover {
+    background-color: #dad7cd;
+}
