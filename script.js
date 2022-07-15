@@ -72,23 +72,6 @@ function updateScore(direction) {
     localStorage.setItem("score", score);
 }
 
-function searchList() {
-    var search = document.getElementById('searchbar');
-    var filter = search.value.toUpperCase();
-    var buttons = document.getElementById('buttons');
-    var button = buttons.getElementsByTagName('button');
-
-    // Loop through all list items, and hide those who don't match the search query
-    for (i = 0; i < button.length; i++) {
-        txtValue = button[i].innerText;
-        if (txtValue.toUpperCase().indexOf(filter) > -1) {
-            button[i].style.display = "";
-        } else {
-            button[i].style.display = "none";
-        }
-    }
-}
-
 function addPlate() {
     var states = JSON.parse(localStorage.getItem("states"));
     var newState = document.getElementById('add').value;
